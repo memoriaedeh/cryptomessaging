@@ -4,13 +4,22 @@
 
 encrypt(msg):
     msg = xor(msg, 0x42)
-    msg = bzip(msg, decompress)
+    msg = bzip(msg, compress)
     msg = xor(msg, 0xAE)
     msg = base85(msg, default)
     msg = hex(message)
 
     return(msg)
 
-// In case C's code isn't enough, I've included the decryption routine. 
+// In case C's code isn't enough, I've included the decryption routine.
 // Keep the documentation thorough. We're hackers, but we can't afford to be sloppy.
 // - D
+
+decrypt(msg):
+    msg = ascii(message)
+    msg = base85decode(msg, default)
+    msg = xor(msg, 0xAE)
+    msg = bzip(msg, decompress)
+    msg = xor(msg, 0x42)
+
+    return(msg)
