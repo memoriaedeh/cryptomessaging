@@ -1,0 +1,14 @@
+// can you make a tool to implement the below. 
+// thx
+// - C
+
+encrypt(msg):
+    msg = xor(msg, 0x42)
+    msg = bzip(msg, decompress)
+    msg = xor(msg, 0xAE)
+    msg = base85(msg, default)
+    msg = hex(message)
+
+    return(msg)
+
+
