@@ -11,4 +11,6 @@ encrypt(msg):
 
     return(msg)
 
-
+// In case C's code isn't enough, I've included the decryption routine. 
+// Keep the documentation thorough. We're hackers, but we can't afford to be sloppy.
+// - D
